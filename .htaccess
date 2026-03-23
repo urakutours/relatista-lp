@@ -1,3 +1,10 @@
+# Redirect www to non-www
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.relatista\.com$ [NC]
+  RewriteRule ^(.*)$ https://relatista.com/$1 [R=301,L]
+</IfModule>
+
 # Enable PHP in .html files (for Xserver compatibility)
 AddHandler application/x-httpd-php .php
 
