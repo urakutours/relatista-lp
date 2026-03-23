@@ -1,0 +1,20 @@
+# Enable PHP in .html files (for Xserver compatibility)
+AddHandler application/x-httpd-php .php
+
+# Default charset
+AddDefaultCharset UTF-8
+
+# Error pages
+ErrorDocument 404 /index.html
+
+# Prevent directory listing
+Options -Indexes
+
+# Cache static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

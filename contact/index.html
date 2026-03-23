@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ — Relatista</title>
+  <meta name="description" content="Relatistaへのお問い合わせはこちらから。機能について、不具合報告、その他のご質問をお受けしています。">
+  <meta property="og:title" content="お問い合わせ — Relatista">
+  <meta property="og:description" content="Relatistaへのお問い合わせはこちらから。">
+  <meta property="og:image" content="https://relatista.com/images/ogp.png">
+  <meta property="og:url" content="https://relatista.com/contact/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://relatista.com/contact/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo"><img src="/images/logo.png" alt="Relatista" height="32"></a>
+      <nav class="nav-desktop">
+        <a href="/#features">特徴</a>
+        <a href="/#pricing">料金</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/manual/">使い方</a>
+        <a href="https://app.relatista.com/signup" class="nav-cta">無料で始める</a>
+      </nav>
+      <button class="hamburger" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile">
+      <a href="/#features">特徴</a>
+      <a href="/#pricing">料金</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/manual/">使い方</a>
+      <a href="/contact/">お問い合わせ</a>
+      <a href="https://app.relatista.com/signup" class="nav-cta">無料で始める</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Contact</h1>
+    <p>お問い合わせ</p>
+  </div>
+
+  <!-- Content -->
+  <div class="page-content">
+
+    <div id="form-message" class="form-message" style="display:none;"></div>
+
+    <form id="contact-form" class="contact-form" action="/contact/send.php" method="POST">
+
+      <!-- Honeypot -->
+      <div class="hp-field">
+        <label for="website">Website</label>
+        <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label for="name">お名前 <span class="optional">（任意）</span></label>
+        <input type="text" id="name" name="name" placeholder="例: 山田太郎">
+      </div>
+
+      <div class="form-group">
+        <label for="email">メールアドレス <span class="required">（必須）</span></label>
+        <input type="email" id="email" name="email" required placeholder="例: example@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="category">お問い合わせ種別</label>
+        <select id="category" name="category">
+          <option value="機能について">機能について</option>
+          <option value="不具合報告">不具合報告</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="content">お問い合わせ内容 <span class="required">（必須）</span></label>
+        <textarea id="content" name="content" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary">送信する</button>
+      </div>
+    </form>
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav">
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="/terms/">利用規約</a>
+        <a href="/company/">会社概要</a>
+        <a href="/tokushoho/">特定商取引法に基づく表示</a>
+        <a href="/manual/">使い方</a>
+        <a href="/contact/">お問い合わせ</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Relatista</p>
+      <p class="footer-disclaimer">Relatistaは伝統的な関係性理論にインスピレーションを得たエンターテインメントアプリです。結果の正確性を保証するものではありません。専門的なカウンセリングが必要な場合は専門家にご相談ください。</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

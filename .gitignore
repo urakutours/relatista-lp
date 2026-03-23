@@ -1,0 +1,8 @@
+node_modules/
+.claude/
+.secret/
+*.log
+debug-*.png
+take-screenshots.mjs
+package.json
+package-lock.json
