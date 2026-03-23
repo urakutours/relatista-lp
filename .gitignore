@@ -1,6 +1,9 @@
 node_modules/
 .claude/
-.secret/
+.secrets/
+.env
+*.key
+*.pem
 *.log
 debug-*.png
 take-screenshots.mjs
