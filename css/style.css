@@ -207,6 +207,8 @@ ul, ol {
   left: 0;
   right: 0;
   bottom: 0;
+  height: calc(100vh - 60px);
+  height: calc(100dvh - 60px);
   background: #0d0d0f;
   padding: 32px 24px;
   flex-direction: column;
@@ -217,6 +219,7 @@ ul, ol {
   visibility: hidden;
   transform: translateY(-12px);
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  overflow-y: auto;
 }
 
 .nav-mobile.active {
@@ -273,13 +276,13 @@ ul, ol {
 }
 
 .hero-brand {
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 400;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
   margin-bottom: 20px;
   line-height: 1.1;
+}
+
+.hero-brand img {
+  height: clamp(48px, 10vw, 72px);
+  width: auto;
 }
 
 .hero-tagline {
@@ -366,6 +369,12 @@ ul, ol {
   gap: 24px;
 }
 
+@media (min-width: 960px) {
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .feature-card {
   background: var(--color-surface);
   border: 1px solid var(--color-gold-dim);
@@ -435,6 +444,13 @@ ul, ol {
   color: var(--color-text-secondary);
 }
 
+.step-card .step-sub {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-top: 8px;
+  line-height: 1.7;
+}
+
 .step-screenshot {
   max-width: 180px;
   margin: 16px auto 0;
@@ -451,9 +467,19 @@ ul, ol {
 /* --- Pricing Section --- */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 860px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: none;
+  }
 }
 
 .pricing-card {
@@ -1019,13 +1045,6 @@ ul, ol {
 
   .hero-brand {
     font-size: 2.8rem;
-  }
-
-  .pricing-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .page-content table th,
